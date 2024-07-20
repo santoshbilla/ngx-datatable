@@ -1,0 +1,44 @@
+<!-- <ngx-datatable
+  class="material"
+  [rows]="filteredData"
+  [columns]="columns"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'">
+  
+  <ngx-datatable-header>
+    <ngx-datatable-column *ngFor="let column of columns">
+      <ng-template ngx-datatable-header-template let-column="column">
+        <input type="text" placeholder="Filter {{ column.name }}" (input)="updateFilter($event, column.prop)">
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable-header>
+
+  <ngx-datatable-body>
+    <ngx-datatable-row *ngFor="let row of filteredData">
+      <ngx-datatable-column *ngFor="let column of columns">
+        <ng-template ngx-datatable-cell-template let-value="value">
+          {{ row[column.prop] }}
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable-row>
+  </ngx-datatable-body>
+</ngx-datatable> -->
+
+
+
+<ngx-datatable
+  class="material"
+  [rows]="filteredData"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'">
+  
+  <ngx-datatable-column *ngFor="let column of columns" [prop]="column.prop" [name]="column.name">
+    <ng-template ngx-datatable-header-template let-column="column">
+      <input type="text" placeholder="Filter {{ column.name }}" (input)="updateFilter($event, column.prop)">
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>
