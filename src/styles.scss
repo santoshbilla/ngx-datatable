@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark .ngx-datatable {
+    background-color: #1f2937; 
+    color: #e5e7eb; 
+  }
+  
+  .dark .ngx-datatable-header {
+    background-color: #374151; 
+    color: #e5e7eb; 
+  }
+  
+  .dark .ngx-datatable-row {
+    border-bottom: 1px solid #4b5563; 
+  }
+  
+  .dark .ngx-datatable-footer {
+    background-color: #374151; 
+    color: #e5e7eb; 
+  }
+  
+  .dark .ngx-datatable-header input {
+    background-color: #1f2937; 
+    color: #e5e7eb; 
+  }
+  .ngx-datatable .datatable-body .datatable-body-row>div {
+    border-bottom: 1px solid #4b5563;
+  }
+
+    .ngx-datatable .datatable-body-cell {
+        padding: 5px;
+        padding-left: 15px;
+        font-size: 12px;
+    }
+  
+
+    .datatable-header-cell-template-wrap  input {
+        background: transparent;
+        border-bottom: 2px solid #4b5563;
+        color: #fff;
+        padding: 5px;
+        padding-left: 15px;
+    }
+
+    .ngx-datatable {
+        padding: 20px;
+    }

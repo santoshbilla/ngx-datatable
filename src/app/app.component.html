@@ -26,10 +26,9 @@
   </ngx-datatable-body>
 </ngx-datatable> -->
 
-
-
-<ngx-datatable
-  class="material"
+<div class="dark">
+  <ngx-datatable
+  class="w-full border border-gray-700 dark:border-gray-600"
   [rows]="filteredData"
   [columnMode]="'force'"
   [headerHeight]="50"
@@ -42,3 +41,6 @@
     </ng-template>
   </ngx-datatable-column>
 </ngx-datatable>
+
+</div>
+
